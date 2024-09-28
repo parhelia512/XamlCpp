@@ -94,7 +94,7 @@ struct __xaml_event_implement : xaml_implement<__xaml_event_implement<TS, TE>, x
 template <typename TS, typename TE>
 xaml_result XAML_CALL xaml_event_new(xaml_event<TS, TE>** ptr) noexcept
 {
-    return xaml_object_new<__xaml_event_implement<TS, TE>>(ptr);
+    return xaml_object_new_catch<__xaml_event_implement<TS, TE>>(ptr);
 }
 #endif // __cplusplus
 
